@@ -1,0 +1,79 @@
+<html>
+<head>
+   <title>color changing bulb</title>
+   <style>
+	  body{background:#ACABAB ;text-align:center;}
+	   #botten1{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  background-color:white;
+	  }
+	  #botten2{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  background-color:yellow;
+	  }
+	   #botten3{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  background-color:blue;
+	  }
+	   #botten4{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  background-color:red;
+	  }
+	   #botten5{
+	  width:50px;
+	  height:50px;
+	  border-radius:50%;
+	  background-color:gray;
+	  }  
+  </style>
+ </head> 
+<body>
+  <div style="background-color:#FBFBE8;text-align:center; ">
+		<h2 style="display:inline-block;color:#4F395E; font-weight: bold;margin-bottom:%;text-decoration: underline overline;">Different colors lighting bulb using JavaScript </h2>
+  </div>
+  <div>
+	<img id="pic" src="assets/images/t1.png" width="300px">
+ </div>
+	<div>
+	<button  id="botten1" onclick="change1()">W</button>
+	<button   id="botten2" onclick="change2()">Y</button>
+    <button  id="botten3" onclick="change3()">B</button>
+    <button  id="botten4" onclick="change4()">R</button>
+	<button  id="botten5" onclick="change5()">Turn Off</button>
+	</div>
+	<script>
+				function change1()
+	{
+	document.getElementById('pic').src='assets/images/w1.png';
+	}
+		function change2()
+	{
+	document.getElementById('pic').src='assets/images/y2.png';
+	}
+		function change3()
+	{
+	document.getElementById('pic').src='assets/images/b2.png';
+	}
+		function change4()
+	{
+	document.getElementById('pic').src='assets/images/r2.png';
+	}
+		function change5()
+	{
+	document.getElementById('pic').src='assets/images/t1.png';
+	}
+	</script>
+  <footer style="text-align: center;color:white;background-color: #4F395E ;height: 35px;margin-top:150px;">Copyright @2021 All reserved with Ahmedabad Institute Of Technology|Designed by Pooja Suthar</footer>
+</body>
+</html>
+  
+  
+  

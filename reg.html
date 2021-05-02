@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>REGISTRATION FORM</title>
+	<style>
+		.n1:
+		hover {background-color:#EDEDED;}
+		.a:link {
+		   color: white;
+		   background-color: transparent;
+		   text-decoration: none;}
+		a:active {
+		   color: white;
+	       background-color: transparent;
+		   text-decoration: none;}
+		a:visited {
+		   color: white;
+	       background-color: transparent;
+	       text-decoration: none;}
+
+		.table-hover tbody tr:hover td {  
+		   background-color: Blue;  
+		   color: red;}  
+		.button {
+		   background-color: #4F395E;
+		   border: none;
+		   color: white;
+		   padding: 16px 32px;
+		   text-align: center;
+		   font-size: 16px;
+		   margin: 4px 2px;
+		   opacity: 0.6;
+		   transition: 0.3s;
+		   display: inline-block;
+		   text-decoration: none;
+		   cursor: pointer;	}
+		.button:hover {opacity: 1}
+		li{list-style-type:none;font-size:16pt}.mail{margin:auto;padding-top:10px;padding-bottom:10px;width:400px;background:#d8f1f8;border:1px soild silver}.mail h2{margin-left:38px}input{font-size:20pt}input:focus,textarea:focus{background-color:#ffffe0}input submit{font-size:12pt}.rq{color:red;font-size:10pt}
+	</style>
+	<script type="text/javascript">
+	
+     function validate(){
+	  var correct_way = /^[A-Za-z]+$/;
+	  var user = document.getElementById('name').value;
+      var pin = document.myForm.pinCode.value;
+      var email = document.myForm.email.value;
+
+		if (user == "") {
+			document.getElementById('username').innerHTML ="Please Fill this field!!";
+			return false;
+		}
+		if ((user.length <= 2) || (user.length > 20)) {
+			document.getElementById('username').innerHTML ="Character lenght must be between 2 & 20!!";   
+			return false;
+
+		}
+		if (!isNaN(user)) {
+			document.getElementById('username').innerHTML ="Only characters are allowed!!";
+			return false;
+		}
+		if (user.match(correct_way)) 
+			true;
+		else{
+			document.getElementById('username').innerHTML ="Only Alphabets are allowed!!";
+			return false;
+
+		}
+
+	if (document.myForm.Address.value == ''){
+        alert("Please enter valid address");
+        document.myForm.Address.focus();
+        return false;
+      } else if (pin == '' || pin.length < 5) {
+        alert("Please enter pincode");
+        document.myForm.Address.focus();
+        return false;
+      } else if (!/[0-9]{6}$/.test(pin)){
+        alert("Only numbers are allowed");
+        document.myForm.Address.focus();
+        return false;
+      } else if (email == '') {
+        alert("Please enter valid email id");
+        document.myForm.Address.focus();
+        return false;
+      } else if (!re.test(email)){
+        alert("Please enter valid email address");
+        document.myForm.Address.focus();
+        return false;
+      }
+
+    } 
+	</script>
+	</head>
+	<body>
+		<div style="height:100%; width:100%; background-color:#FBFBE8;text-align:center; ">
+		<h1 style="display:inline-block;color:#4F395E; font-weight: bold;margin-bottom:2%;text-decoration: underline overline;">REGISTRATION FORM</h1>
+		<center>
+		<div class="row" style="height:80%; margin-left:7%;">
+			<div class="col-sm-2" style="background-color:#706279; height:100%">
+				 <label  id="user" for="name" style="color:white;margin-bottom:15%;margin-top:12%;text-decoration: underline;">Full Name</label><br>
+				 <label id="email-label" for="email" style="color:white;margin-bottom:15%;text-decoration: underline;">Email</label><br>
+				 <label id="number-label" for="number"style="color:white;margin-bottom:12%;text-decoration: underline;">Gender</label><br>
+				 <label id="number-label" for="name"style="color:white;margin-bottom:12%;text-decoration: underline;">Branch</label><br>
+				 <label id="number-label" for="name"style="color:white;margin-bottom:12%;text-decoration: underline;">Semester</label><br>
+				 <label id="number-label" for="name"style="color:white;margin-bottom:29%;text-decoration: underline;">Language OR Projects</label><br>
+				 <label id="number-label" for="name"style="color:white;margin-bottom:12%;text-decoration: underline;">Address</label><br>
+				 
+			</div> 
+			<div class="col-sm-9" style="background-color:#EDEDED ;height:100%;">
+				<form action="#" onsubmit="return validation()" class="bg-light">
+					<div class="form-group" style="margin-bottom:2%;margin-top:2%;">
+					  <input type="name"name="user"id="user" class="form-control" placeholder="Enter your name" autocomplete="off" required/>
+					  <span id="username" class="text-danger font-weight-bold"></span>
+					</div>
+					<div class="form-group">
+					  <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+					</div>
+					<div class="form-group"style="margin-right:85%;" >
+					  <label style="margin-left:5%;text-align:left">
+						<input name="user-recommend" value="definitely" type="radio" class="input-radio"checked/>Male</label>
+					  <label>
+						<input name="user-recommend" value="maybe" type="radio" class="input-radio"/>Female</label>
+					</div>
+					<div class="form-group">
+					  <select id="dropdown" name="role" class="form-control" required>
+						<option disabled selected value>Select your branch</option>
+						<option value="ce">CE</option>
+						<option value="it">IT</option>
+						<option value="ec">EC</option>
+						<option value="other">Other</option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <select id="most-like" name="mostLike" class="form-control" required>
+						<option disabled selected value>Select your current semester</option>
+						<option value="challenges">semester-1</option>
+						<option value="projects">semester-2</option>
+						<option value="community">semester-3</option>
+						<option value="openSource">semester-4</option>
+						<option value="challenges">semester-5</option>
+						<option value="projects">semester-6</option>
+						<option value="community">semester-7</option>
+						<option value="openSource">semester-8</option>
+					  </select>
+					</div>
+					<div class="form-group" style="margin-right:30%;text-align:left;">
+					  <p>Select Language OR Projects you know</p>
+					  <label><input name="prefer"value="front-end-projects"type="checkbox"class="input-checkbox"/>Front-end Projects</label>
+					  <label><input name="prefer"value="back-end-projects"type="checkbox"class="input-checkbox"/>Back-end Projects</label >
+					  <label><input name="prefer"value="data-visualization"type="checkbox" class="input-checkbox"/>Data Visualization</label>
+					  <label><input name="prefer"value="py"type="checkbox"class="input-checkbox"/>Python</label>
+					  <label><input name="prefer"value="java"type="checkbox"class="input-checkbox"/>JAVA</label>
+					  <label><input name="prefer"value="additional-courses"type="checkbox"class="input-checkbox"/>Additional Courses</label>
+					</div>
+					<div class="form-group">
+					  <textarea type="address" name="address" id="address" class="form-control" placeholder="Enter your address" required/></textarea>
+					</div>
+					<div class="form-group">
+					  <p>Any comments or suggestions?</p>
+					  <textarea id="comments"class="input-textarea"name="comment"placeholder="Enter your comment here..."></textarea>
+					</div>
+
+					<div class="form-group">
+					  <button onclick="alphanumeric(document.form1.text1)"type="submit" id="submit" class="button" >Submit</button>
+					</div>
+				</form>
+				</center>
+			</div>
+			<footer style="text-align: center;color:white;background-color: #4F395E ;height: 35px;">Copyright @2021 All reserved with Ahmedabad Institute Of Technology|Designed by Pooja Suthar</footer>
+		</div>
+		</div>	
+	</body>
+
+</html>

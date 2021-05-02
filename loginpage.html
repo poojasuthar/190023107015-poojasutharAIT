@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>LOGIN FORM</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+		 background-image: url("assets/images/p1.jpg");
+		}
+		.textcolor{color:#F7F9F9 ;background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color:white;}
+	</style>	
+	<script type="text/javascript">
+
+		function validation(){
+		
+			var correct_way = /^[A-Za-z]+$/;
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+			
+			
+			if(user == ""){
+				document.getElementById('username').innerHTML =" **Please fill the username field**";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)){
+				document.getElementById('username').innerHTML =" **username length must be 2-20**";
+				return false;
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" **Only Characters are allowed**";
+				return false;
+			}
+			
+			if(pass == ""){
+				document.getElementById('password').innerHTML =" **Please fill the password field**";
+				return false;
+			}
+			if((pass.length <= 6) || (pass.length > 12)){
+				document.getElementById('password').innerHTML =" **password length must be 6-12**";
+				return false;
+			}
+			if(pass!=confirmpass){
+				document.getElementById('password').innerHTML =" **Confirmpassword must be same as password**";
+				return false;
+			}
+			
+			if(confirmpass == ""){
+				document.getElementById('confirmpass').innerHTML =" **Please fill the confirmpassword field**";
+				return false;
+			}
+			
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" **Please fill the Mobile Number field**";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" **Please fill correct Mobile Number it must be in digits**";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" **Mobile Number must be 10 digits**";
+				return false;
+			}
+			
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" **Please fill the Email idx` field**";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0){
+				document.getElementById('emailids').innerHTML =" **@ Invalid Position**";
+				return false;
+			}
+			if((emails.charAt(email.length-4)!='.') && (email.length-4)!='.'){
+				document.getElementById('emailids').innerHTML =" **@ Invalid Position**";
+				return false;
+			}
+			
+		}
+	
+	</script>
+</head>
+<body>
+	<div class="container"><br>
+		<h1 class=" text-center" style="color:#F7F9F9;">LOGIN FORM</h1><br>
+		<div class="col-lg-8 m-auto d-block">
+			
+			<form action="#" onsubmit="return validation()" class="textcolor">
+			
+				<div class="form-group">
+					<label >Username:</label>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+					<span id="username" class="text-danger font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+					<span id="password" class="text-danger font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label>Confirm Password:</label>
+					<input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
+					<span id="confirmpass" class="text-danger font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label>Mobile Number:</label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"></span>
+				</div>
+				
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" class="text-danger font-weight-bold"></span>
+				</div>
+<input type="submit" name="submit" value="submit" id="submit" class="btn btn" style="background-color:#AEB6BF;color:#F7F9F9 ;"></form>
+<footer style="text-align: center;color:#F7F9F9 ;background-color:#AEB6BF;height: 35px;">Copyright @2021 All reserved with Ahmedabad Institute Of Technology|Designed by Pooja Suthar</footer>
+</div></div>
+</body>
+</html>

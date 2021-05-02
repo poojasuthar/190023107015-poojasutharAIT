@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Growing</title>
+	<style type="text/css">
+	body{
+		background: #E2FFE2 ;
+	}
+		p
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<div style="background-color:#43DCFF;height:100%;width:100%;text-align:center;">
+	<h1 style="display:inline-block;color:#4F395E; font-weight: bold;margin-bottom:2%;text-decoration: underline overline;">Text Growing</h1><br>
+	</div>
+	<div style="background-color:#4F395E ;height:100%;width:100%;text-align:center;margin-top:3px;">
+	<h1 style="display:inline-block;color:#43DCFF; font-weight: bold;margin-bottom:2%;text-decoration: underline overline;">POOJA SUTHAR (190023107015)</h1><br>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		
+		var var1 = setInterval(inTimer, 500);
+		var fs =5;
+		var ids = document.getElementById("demo");
+
+		function inTimer()
+		{
+			ids.innerHTML = 'AHMEDABAD INSTITUTE OF TECHNOLOGY';
+			ids.setAttribute('style', "font-size: " + fs + "px; color: #43DCFF");
+			fs +=5;
+			if(fs >= 50)
+			{
+				clearInterval(var1);
+			
+
+			}
+		}
+	</script>
+	</div>
+</body>
+</html>
